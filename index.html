@@ -1,1 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>For My Cutiee ❤️</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<div id="hearts"></div>
+
+<!-- ===========================
+WELCOME SCREEN
+============================ -->
+
+<section
+class="screen active"
+id="welcome">
+
+<div class="glass">
+
+<h1>
+
+Hi Cutiee ❤️
+
+</h1>
+
+<p>
+
+I spent my whole day making this.
+
+<br><br>
+
+I didn't want to use this idea
+for an apology...
+
+<br><br>
+
+But here we are.
+
+</p>
+
+<button
+onclick="openScreen('dashboard')">
+
+Enter ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===========================
+DASHBOARD
+============================ -->
+
+<section
+class="screen"
+id="dashboard">
+
+<div class="dashboard">
+
+<h2>
+
+Cutiee's Corner ❤️
+
+</h2>
+
+<p>
+
+Choose anything...
+
+</p>
+
+<div class="menu">
+
+<div
+class="card"
+onclick="openScreen('letter')">
+
+<span>💌</span>
+
+<h3>
+
+Love Letter
+
+</h3>
+
+</div>
+
+<div
+class="card"
+onclick="openScreen('apology')">
+
+<span>❤️</span>
+
+<h3>
+
+Apology
+
+</h3>
+
+</div>
+
+<div
+class="card"
+onclick="openScreen('time')">
+
+<span>⏳</span>
+
+<h3>
+
+Together
+
+</h3>
+
+</div>
+
+<div
+class="card"
+onclick="openScreen('special')">
+
+<span>🌸</span>
+
+<h3>
+
+Why You're Special
+
+</h3>
+
+</div>
+
+<div
+class="card"
+onclick="openScreen('games')">
+
+<span>🎮</span>
+
+<h3>
+
+Mini Games
+
+</h3>
+
+</div>
+
+<div
+class="card"
+onclick="openScreen('wheel')">
+
+<span>🎁</span>
+
+<h3>
+
+Gift Wheel
+
+</h3>
+
+</div>
+
+</div>
+
+<p class="footer">
+
+Made with ❤️ by Mustafa
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+LOVE LETTER
+============================ -->
+
+<section
+class="screen"
+id="letter">
+
+<div class="glass">
+
+<h2>
+
+💌 Love Letter
+
+</h2>
+
+<div class="paper">
+
+<p>
+
+Replace this with your own
+letter.
+
+<br><br>
+
+Write everything you have
+always wanted to tell her.
+
+<br><br>
+
+Make it honest.
+
+Make it you.
+
+</p>
+
+</div>
+
+<button
+onclick="openScreen('dashboard')">
+
+← Back
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===========================
+APOLOGY
+============================ -->
+
+<section
+class="screen"
+id="apology">
+
+<div class="glass">
+
+<h2>
+
+❤️ I'm Sorry
+
+</h2>
+
+<p>
+
+I know sorry doesn't fix
+everything.
+
+<br><br>
+
+I know I hurt you.
+
+<br><br>
+
+I'm not asking you to forget.
+
+I'm only asking for a chance
+to prove I can do better.
+
+</p>
+
+<button
+onclick="openScreen('dashboard')">
+
+← Back
+
+</button>
+
+</div>
+
+</section>
+  <!-- ===========================
+TOGETHER
+=========================== -->
+
+<section class="screen" id="time">
+
+    <div class="glass">
+
+        <h2>⏳ Our Time Together</h2>
+
+        <div class="timeGrid">
+
+            <div class="timeBox">
+                <h3 id="years">0</h3>
+                <span>Years</span>
+            </div>
+
+            <div class="timeBox">
+                <h3 id="months">0</h3>
+                <span>Months</span>
+            </div>
+
+            <div class="timeBox">
+                <h3 id="days">0</h3>
+                <span>Days</span>
+            </div>
+
+            <div class="timeBox">
+                <h3 id="hours">0</h3>
+                <span>Hours</span>
+            </div>
+
+            <div class="timeBox">
+                <h3 id="minutes">0</h3>
+                <span>Minutes</span>
+            </div>
+
+            <div class="timeBox">
+                <h3 id="seconds">0</h3>
+                <span>Seconds</span>
+            </div>
+
+        </div>
+
+        <p class="quote">
+
+            Every second with you has been worth it. ❤️
+
+        </p>
+
+        <button onclick="openScreen('dashboard')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+WHY YOU'RE SPECIAL
+=========================== -->
+
+<section class="screen" id="special">
+
+    <div class="glass">
+
+        <h2>
+
+            🌸 Why You're Special
+
+        </h2>
+
+        <p>
+
+            Tap any compliment ❤️
+
+        </p>
+
+        <div id="complimentWall">
+
+        </div>
+
+        <button onclick="openScreen('dashboard')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+GAMES MENU
+=========================== -->
+
+<section class="screen" id="games">
+
+    <div class="glass">
+
+        <h2>
+
+            🎮 Mini Games
+
+        </h2>
+
+        <div class="menu">
+
+            <div
+            class="card"
+            onclick="openScreen('slap')">
+
+                <span>😂</span>
+
+                <h3>
+
+                    Slap Mustafa
+
+                </h3>
+
+            </div>
+
+            <div
+            class="card"
+            onclick="openScreen('icecream')">
+
+                <span>🍦</span>
+
+                <h3>
+
+                    Ice Cream Stack
+
+                </h3>
+
+            </div>
+
+        </div>
+
+        <button onclick="openScreen('dashboard')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+SLAP MUSTAFA
+=========================== -->
+
+<section class="screen" id="slap">
+
+    <div class="glass">
+
+        <h2>
+
+            😂 Slap Mustafa
+
+        </h2>
+
+        <p>
+
+            Official anger management exercise.
+
+        </p>
+
+        <div id="slapMessage">
+
+            Go on...
+
+            I probably deserve it 😭
+
+        </div>
+
+        <div id="mustafaFace">
+
+            🙂
+
+        </div>
+
+        <div id="slapCounter">
+
+            0 / 10 Slaps
+
+        </div>
+
+        <button
+        id="continueButton">
+
+            ❤️ Continue
+
+        </button>
+
+        <button
+        onclick="openScreen('games')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+ICE CREAM GAME
+=========================== -->
+
+<section class="screen" id="icecream">
+
+    <div class="glass">
+
+        <h2>
+
+            🍦 Ice Cream Stack
+
+        </h2>
+
+        <p>
+
+            Tap the button to stack scoops.
+
+            Don't let it fall!
+
+        </p>
+
+        <div id="iceCreamGame">
+
+            🍦
+
+        </div>
+
+        <button id="stackButton">
+
+            Stack Scoop
+
+        </button>
+
+        <button onclick="openScreen('games')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+  <!-- ===========================
+GIFT WHEEL
+=========================== -->
+
+<section class="screen" id="wheel">
+
+    <div class="glass">
+
+        <h2>🎁 Gift Wheel</h2>
+
+        <p>
+
+            Spin the wheel...
+
+            Whatever it lands on,
+
+            I owe you 😅
+
+        </p>
+
+        <div class="wheelContainer">
+
+            <div id="wheelDisc">
+
+                <div class="wheelCenter"></div>
+
+            </div>
+
+            <div class="pointer">▼</div>
+
+        </div>
+
+        <button id="spinWheel">
+
+            Spin ❤️
+
+        </button>
+
+        <h3 id="wheelResult">
+
+        </h3>
+
+        <button onclick="openScreen('dashboard')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+SECRET PAGE
+=========================== -->
+
+<section class="screen" id="secret">
+
+    <div class="glass">
+
+        <h2>
+
+            ❤️ Secret ❤️
+
+        </h2>
+
+        <p>
+
+            Congratulations.
+
+            <br><br>
+
+            You found the hidden page.
+
+            <br><br>
+
+            This page is only for you.
+
+        </p>
+
+        <div class="paper">
+
+            <h3>
+
+                100 Reasons
+
+                I Love You
+
+            </h3>
+
+            <p>
+
+                (We'll fill this together later ❤️)
+
+            </p>
+
+        </div>
+
+        <button onclick="openScreen('dashboard')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Hidden Heart -->
+
+<div id="secretHeart">
+
+    ❤️
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
