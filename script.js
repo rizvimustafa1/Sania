@@ -140,9 +140,9 @@ compliments.forEach(text=>{
 
     bubble.innerHTML = text;
 
-    bubble.style.left = Math.random()*75 + "%";
+    bubble.style.left = Math.random()*82 + "%";
 
-    bubble.style.top = Math.random()*75 + "%";
+    bubble.style.top = Math.random()*85 + "%";
 
     bubble.style.transform =
         `rotate(${Math.random()*20-10}deg)`;
