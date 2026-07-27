@@ -386,17 +386,15 @@ button:active{
    COMPLIMENT WALL
 ========================================== */
 
-#complimentWall{
+.complimentWall{
 
     position:relative;
 
     width:100%;
 
-    min-height:360px;
+    height:360px;
 
-    margin-top:25px;
-
-    overflow:hidden;
+    margin-top:30px;
 
 }
 
@@ -406,21 +404,23 @@ button:active{
 
     background:white;
 
-    color:#ff6d98;
+    color:#ff5c8a;
 
-    padding:12px 18px;
+    padding:10px 18px;
 
-    border-radius:30px;
+    border-radius:999px;
+
+    white-space:nowrap;
+
+    font-size:15px;
 
     font-weight:600;
 
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 
-    cursor:pointer;
-
     transition:.25s;
 
-    user-select:none;
+    cursor:pointer;
 
 }
 
