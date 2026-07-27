@@ -56,7 +56,7 @@ setInterval(createHeart,600);
 // LIVE COUNTER
 // ==========================================
 
-const relationshipDate = new Date("2025-04-13T00:00:00");
+const relationshipDate = new Date("2026-04-13T00:00:00");
 
 function updateCounter(){
 
