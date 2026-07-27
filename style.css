@@ -1,1 +1,778 @@
+/* ==========================================
+   RESET
+========================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(180deg,#FFF8FA,#FFE8EF);
+
+    color:#333;
+
+    overflow:hidden;
+
+    height:100vh;
+
+}
+
+
+
+/* ==========================================
+   FLOATING HEARTS
+========================================== */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    color:#ff8cab;
+
+    opacity:.7;
+
+    animation:floatHeart linear forwards;
+
+}
+
+
+
+/* ==========================================
+   SCREENS
+========================================== */
+
+.screen{
+
+    display:none;
+
+    width:100%;
+
+    height:100vh;
+
+    padding:25px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:fade .4s ease;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+}
+
+
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glass{
+
+    width:100%;
+
+    max-width:390px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:28px;
+
+    padding:30px 22px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 10px 40px rgba(0,0,0,.08);
+
+}
+
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+h3{
+
+    font-size:18px;
+
+}
+
+p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:25px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#ff7da6;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard{
+
+    width:100%;
+
+    max-width:420px;
+
+    text-align:center;
+
+}
+
+.dashboard h2{
+
+    margin-bottom:5px;
+
+}
+
+.dashboard p{
+
+    margin-bottom:25px;
+
+}
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+
+/* ==========================================
+   APP CARDS
+========================================== */
+
+.card{
+
+    background:rgba(255,255,255,.75);
+
+    border-radius:24px;
+
+    padding:24px 15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card span{
+
+    font-size:42px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.card h3{
+
+    font-size:16px;
+
+    color:#444;
+
+}
+
+
+
+/* ==========================================
+   LETTER
+========================================== */
+
+.paper{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-top:20px;
+
+    text-align:left;
+
+    max-height:330px;
+
+    overflow-y:auto;
+
+    box-shadow:
+
+    inset 0 0 10px rgba(0,0,0,.04);
+
+}
+
+.paper::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+.paper::-webkit-scrollbar-thumb{
+
+    background:#ff7da6;
+
+    border-radius:10px;
+
+}
+/* ==========================================
+   TIME COUNTER
+========================================== */
+
+.timeGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+.timeBox{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:18px 10px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.timeBox h3{
+
+    color:#ff6d98;
+
+    font-size:28px;
+
+    margin-bottom:5px;
+
+}
+
+.timeBox span{
+
+    font-size:12px;
+
+    color:#777;
+
+}
+
+
+
+/* ==========================================
+   COMPLIMENT WALL
+========================================== */
+
+#complimentWall{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:360px;
+
+    margin-top:25px;
+
+    overflow:hidden;
+
+}
+
+.compliment{
+
+    position:absolute;
+
+    background:white;
+
+    color:#ff6d98;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    user-select:none;
+
+}
+
+.compliment:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+
+/* ==========================================
+   SLAP MUSTAFA
+========================================== */
+
+#mustafaFace{
+
+    width:190px;
+
+    height:190px;
+
+    margin:30px auto;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.08s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+#mustafaFace:active{
+
+    transform:scale(.85);
+
+}
+
+#slapMessage{
+
+    min-height:35px;
+
+    margin-top:15px;
+
+    color:#666;
+
+    font-style:italic;
+
+}
+
+#slapCounter{
+
+    margin-top:20px;
+
+    font-size:26px;
+
+    color:#ff6d98;
+
+    font-weight:700;
+
+}
+
+#continueButton{
+
+    display:none;
+
+}
+
+
+
+/* ==========================================
+   ICE CREAM GAME
+========================================== */
+
+#iceCreamGame{
+
+    width:170px;
+
+    height:260px;
+
+    margin:30px auto;
+
+    border-radius:25px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    font-size:45px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+    padding-bottom:20px;
+
+}
+
+
+
+/* ==========================================
+   GIFT WHEEL
+========================================== */
+
+.wheelContainer{
+
+    position:relative;
+
+    width:260px;
+
+    height:260px;
+
+    margin:30px auto;
+
+}
+
+#wheelDisc{
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    border:10px solid white;
+
+    background:conic-gradient(
+
+        #ff9aba 0deg 30deg,
+        #ffd6e4 30deg 60deg,
+        #ffc4d8 60deg 90deg,
+        #ffe5ef 90deg 120deg,
+        #ffb5cf 120deg 150deg,
+        #ffd2e2 150deg 180deg,
+        #ff9aba 180deg 210deg,
+        #ffd6e4 210deg 240deg,
+        #ffc4d8 240deg 270deg,
+        #ffe5ef 270deg 300deg,
+        #ffb5cf 300deg 330deg,
+        #ffd2e2 330deg 360deg
+
+    );
+
+    transition:5s cubic-bezier(.15,.9,.2,1);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.wheelCenter{
+
+    width:35px;
+
+    height:35px;
+
+    background:white;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+.pointer{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:28px;
+
+    color:#ff6d98;
+
+}
+
+#wheelResult{
+
+    margin-top:20px;
+
+    color:#ff6d98;
+
+    min-height:35px;
+
+}
+
+
+
+/* ==========================================
+   SECRET HEART
+========================================== */
+
+#secretHeart{
+
+    position:fixed;
+
+    bottom:18px;
+
+    right:18px;
+
+    font-size:18px;
+
+    opacity:.18;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#secretHeart:hover{
+
+    opacity:1;
+
+    transform:scale(1.3);
+
+}
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    margin-top:25px;
+
+    font-size:13px;
+
+    color:#888;
+
+}
+
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:.8;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:390px){
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    h2{
+
+        font-size:28px;
+
+    }
+
+    .menu{
+
+        gap:14px;
+
+    }
+
+    .card{
+
+        padding:20px 12px;
+
+    }
+
+    #wheelDisc{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+    .wheelContainer{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+}
